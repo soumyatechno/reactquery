@@ -3,7 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './components/home.page';
 import Superheroes from './components/superheroes.page';
 import Rqsuperheroes from './components/Rqsuperheroes.page';
-
+import { ReactQueryDevtools } from 'react-query/devtools';
 function App() {
 	return (
 		<div className="App">
@@ -23,6 +23,7 @@ function App() {
 				<Route path="/superheroes" element={<Superheroes />} />
 				<Route path="/rqsuperheroes" element={<Rqsuperheroes />} />
 			</Routes>
+			<ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
 		</div>
 	);
 }
